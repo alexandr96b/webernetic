@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Title</title>
+    <meta property="og:title" content="" /> 
+    <meta property="og:description" content="" />
+    <meta name="title" content="" /> 
+    <meta name="description" content="" /> 
+	<link href="css/slick.css" rel="stylesheet">
+	<link href="css/jquery.fancybox.min.css" rel="stylesheet">
+	<link href="css/fontawesome-all.css" rel="stylesheet">
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="webfonts/fonts.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+	<link href=”images/favicon.ico” rel=”shortcut icon” type=”image/x-icon”>
+	<link rel="shortcut icon" href="#">
+	<link rel="shortcut icon" href="images/logo.png" type="image/png" />	
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+<!-- modal-callback -->
+<div class="modal b-modal fade" id="modalcallback" tabindex="-1" role="dialog" aria-labelledby="modalcallback" aria-hidden="true">
+	<div class="modal-dialog">
+		<button data-dismiss="modal" class="modal-close"><i class="fas fa-times"></i></button>
+		<div class="b-modal-content">
+			<div class="b-modal-top">
+				<b>Заказать звонок</b>
+			</div>
+			<div class="b-modal-form">
+				<form action="">
+					<div class="b-modal-form__top">
+						<input class="b-modal-form__input" type="text" placeholder="Имя *">
+						<input class="b-modal-form__input" type="text" placeholder="Телефон *">
+					</div>
+					<span class="b-modal-form__title">Чем вам помочь?</span>
+					<div class="b-modal-form__content">
+						<div class="b-modal-form__col">
+							<div class="b-checkbox">
+								<input type="radio" checked id="c1" name="b4" />
+								<label for="c1"><span></span><i>Сайт</i></label>  
+							</div>
+							<div class="b-checkbox">
+								<input type="radio"  id="n12" name="b4" />
+								<label for="n12"><span></span><i>Аудит</i></label>  
+							</div>							
+						</div>
+						<div class="b-modal-form__col">
+							<div class="b-checkbox">
+								<input type="radio"  id="n13" name="b4" />
+								<label for="n13"><span></span><i>Поддержка</i></label>  
+							</div>
+							<div class="b-checkbox">
+								<input type="radio"  id="n14" name="b4" />
+								<label for="n14"><span></span><i>Наполнение</i></label>  
+							</div>							
+						</div>
+						<div class="b-modal-form__col">
+							<div class="b-checkbox">
+								<input type="radio"  id="n15" name="b4" />
+								<label for="n15"><span></span><i>Доработка</i></label>  
+							</div>
+							<div class="b-checkbox">
+								<input type="radio"  id="n16" name="b4" />
+								<label for="n16"><span></span><i>Другое</i></label>  
+							</div>							
+						</div>												
+					</div>
+					<input class="b-modal-form__btn blue-btn" type="submit" value="Отправить">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<!-- modal-callback -->
+<div class="modal b-modal fade" id="modalthx" tabindex="-1" role="dialog" aria-labelledby="modalthx" aria-hidden="true">
+	<div class="modal-dialog">
+		<button data-dismiss="modal" class="modal-close"><i class="fas fa-times"></i></button>
+		<div class="modal-wrap">
+			<div class="modal-top">
+				<img src="images/modal-img.svg" alt="">
+				<b>Через три минуты мы позвоним вам</b>
+			</div>
+			<p>Нужно срочно поговорить?</p>
+			<div class="modal-bottom">
+				<span>Вот наши номера :</span>
+				<div class="modal-bottom__right">
+					<a href="tel:+375 17 380 2600">+375 17 380 2600</a>
+					<a href="tel:+375 29 673 0717">+375 29 673 0717</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+ <div class="b-menu">
+ 	<div class="b-menu-wrap">
+ 		<div class="container">
+ 			<div class="row">
+ 				<div class="col-xl">
+					<div class="b-menu-top">
+						<button class="btn-menu blue-btn">Меню</button>
+						<a href="" class="b-logo"></a>
+						<button class="btn-callback blue-btn" data-toggle="modal" data-target="#modalcallback">Позвонить</button> 
+					</div> 					
+			 		<b>Главная </b>
+			 		<div class="b-menu-content">
+			 			<div class="b-menu-xs b-menu-col">
+			 				<strong>Обучение</strong>
+			 				<ul>
+			 					<li><a href="">SEO курсы</a></li>
+			 					<li><a href="">Интернет-маркетингу</a></li>
+			 					<li><a href="">Обучение по продажам</a></li>
+			 				</ul>
+			 			</div>
+			 			<div class="b-menu-xs b-menu-col">
+			 				<strong>О компании</strong>
+			 				<ul>
+			 					<li><a href="">Наша идеология</a></li>
+			 					<li><a href="">История</a></li>
+			 					<li><a href="">Команда</a></li>
+			 					<li><a href="">Вакансии</a></li>
+			 					<li><a href="">Сотрудничество</a></li>
+			 				</ul>
+			 			</div>
+			 			<div class="b-menu-xs b-menu-col">
+			 				<strong>Разработка сайта</strong>
+			 				<ul>
+			 					<li><a href="">По типу</a></li>
+			 					<li><a href="">По тематикам</a></li>
+			 					<li><a href="">По CMS</a></li>
+			 					<li><a href="">Доп услуги разработки</a></li>
+			 				</ul>
+			 			</div>
+			 			<div class="b-menu-xs b-menu-col">
+			 				<strong>Кейсы</strong>
+			 				<ul>
+			 					<li><a href="">SEO продвижение</a></li>
+			 					<li><a href="">Контекстная реклама</a></li>
+			 					<li><a href="">Сайты</a></li>
+			 				</ul>
+			 				<strong>Пресс-центр</strong>
+			 				<ul>
+			 					<li><a href="">Новости</a></li>
+			 					<li><a href="">Блог</a></li>
+			 					<li><a href="">Отзывы</a></li>
+			 				</ul>
+			 			</div>
+			 			<div class="b-menu-xs b-menu-col">
+			 				<strong>SEO продвижение</strong>
+			 				<ul>
+			 					<li><a href="">По поисковым системам</a></li>
+			 					<li><a href="">По типу</a></li>
+			 					<li><a href="">По странам</a></li>
+			 					<li><a href="">По CMS</a></li>
+			 					<li><a href=""></a></li>
+			 					<li><a href="">По типу сайта </a></li>
+			 					<li><a href="">Оптимизация сайта</a></li>
+			 					<li><a href="">Проверить работу сео-специалиста</a></li>
+			 					<li><a href="">Вывод сайта из-под санкций</a></li>
+			 				</ul>
+			 			</div>
+			 			<div class="b-menu-xs b-menu-col">
+			 				<strong>Контекстная реклама</strong>
+			 				<ul>
+			 					<li><a href="">РСЯ  создание и ведение </a></li>
+			 					<li><a href="">КМС создание и ведение </a></li>
+			 					<li><a href="">Создание и ведение ретаргетинга</a></li>
+			 					<li><a href="">Создание и ведение ремаркетинга</a></li>
+			 					<li><a href="">Создание рекламной компании</a></li>
+			 					<li><a href="">Ведение рекламной компании</a></li>
+			 					<li><a href="">Янекс директ</a></li>
+			 					<li><a href="">Google adwords</a></li>
+			 				</ul>
+			 			</div>  			 			 			
+			 			<div class="b-menu-xs b-menu-col">
+			 				<strong>Аудит сайта</strong>
+			 				<ul>
+			 					<li><a href="">SEO-аудит</a></li>
+			 					<li><a href="">Аудит юзабилити</a></li>
+			 				</ul>
+			 			</div>
+			 			<div class="b-menu-col b-menu-col__two">
+			 				<strong>Контакты</strong>
+			 				<ul>
+			 					<li><a href="">+375 17 380 2600</a></li>
+			 					<li><a href="">+375 29 673 0717</a></li>
+			 					<li><a href="">office@webernetic.by</a></li>
+			 				</ul>
+			 			</div> 			
+			 		</div>
+					<div class="b-footer-social">
+						<ul>
+							<li><a href=""><img src="images/vk.svg" alt=""></a></li>
+							<li><a href=""><img src="images/telegram.svg" alt=""></a></li>
+							<li><a href=""><img src="images/twitter.svg" alt=""></a></li>
+							<li><a href=""><img src="images/viber.svg" alt=""></a></li>
+						</ul>
+					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+ </div>
+
+
+<div class="b-container">
+
+<!-- begin b-header -->
+<header class="b-header b-header-inner">
+	<div class="b-header-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl">
+					<button class="btn-menu blue-btn">Меню</button>
+					<a href="" class="b-logo"></a>
+					<button class="btn-callback blue-btn" data-toggle="modal" data-target="#modalthx">Позвонить</button> 
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- end b-header -->
+	
+<div class="b-audit-page">
+	<!-- begin b-content -->
+	<section class="b-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl">
+					<div class="b-content-wrap">
+						<div class="b-content-left">
+							<h1>Аудит сайта</h1>
+							<div class="b-content-img">
+								<img src="images/eye.png" alt="">
+							</div>
+							<div class="b-content-text">
+								<p>lorem ipsum ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+							<a class="b-content-button" href="">Заказать аудит</a>
+						</div>					
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end b-content -->
+
+
+	<section class="b-audit">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl">
+					<div class="b-title">
+						<h2>Виды аудита</h2>
+					</div>
+					<div class="b-audit-content">
+						<div class="b-audit-item">
+							<div class="b-audit-item__top">
+								<b>SEO-аудит сайта</b>
+								<p>SEO-аудит - представляет собой глубинную комплексную проверку сайта, которая выявит все существующие отклонения от seo-норм. Аудит сайта позволит максимально улучшить его работу.</p>
+							</div>
+							<ul>
+								<li><a href="">Узнать больше</a></li>
+								<li><a href="">Заказать аудит</a></li>
+							</ul>
+						</div>
+						<div class="b-audit-item">
+							<div class="b-audit-item__top">
+								<b>Юзабилити-аудит</b>
+								<p>Юзабилити аудит - представляет собой экспертную оценку удобства использования Вашего ресурса. Проверка выявит основные недочеты, которые препятствуют целевой аудитории комфортно пользоваться web-ресурсом, заказывать товары и услуги на сайте Вашей компании.</p>
+							</div>
+							<ul>
+								<li><a href="">Узнать больше</a></li>
+								<li><a href="">Заказать аудит</a></li>
+							</ul>
+						</div>						
+					</div>
+					<div class="b-audit-bottom">
+						<div class="b-audit-bottom__left">
+							<b>Результаты аудита</b>
+							<p>Расскажем как обеспечить сайту высокие позиции в поисковиках</p>
+							<p>Поможем сделать сайт более удобным для пользователей</p>
+							<p>Расскажем как увеличить число клиентов и средний чек с сайта</p>
+						</div>
+						<div class="b-audit-bottom__right">
+							<p>Основным результатом АС является определение данных и выработка рекомендаций по каждой составляющей, определяющих последующую оптимизацию и поисковое продвижение. Таких как: определение конкурентных преимуществ товара и целевой аудитории ресурса, рекомендации по приведению в соответствие дизайна сайта и его тематики, общие рекомендации по построению и оптимизации дизайна, определение семантического ядра запросов, рекомендации по распределению запросов по страницам сайта, внутренней перелинковке и т.п.</p>
+						</div>
+					</div>
+					<strong>Главный результат аудита сайта: формирование стратегии продвижения исследуемого ресурса.</strong>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="b-cases">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl">
+					<div class="b-title">
+						<h2>Наши кейсы</h2>
+					</div>
+					<div class="b-cases-content">
+						<div class="b-cases-left">
+							<b>Вельмi смачна</b>
+							<a href="">velmi.by</a>
+							<p>Дистрибьютор кондитерских изделий 
+							в Республике Беларусь.</p>
+							<a href="">Смотреть кейс</a>
+							<img src="images/img.png" alt="">
+							<a class="blue-btn" href="">Все проекты</a>
+						</div>
+
+						<div class="b-cases-right">
+							<ul>
+								<li><a href="">#Сайты</a></li>
+								<li><a href="">#SEO</a></li>
+								<li><a href="">#PPC</a></li>
+								<li><a href="">#SMM</a></li>
+							</ul>
+							<p><span>Задача.</span> Разработать сайт,  заявить о нем в поисковиках и соц сетях</p>
+							<p>Было решено набросать вкуностей на главную,  прайс и контакты вынесли в шапку, чтобы можно было сделать заказ максимально просто и быстро. </p>
+							<img src="images/img2.png" alt="">
+							<p>В любую точку сайта за 5 секунд — принцип которым руководствовались пока работали над этим проектом </p>
+							<div class="b-cases-wrap">
+								<div class="b-cases-block">
+									<b>90%</b>
+									<p>
+									высокочастотников в топ 3</p>
+								</div>
+								<div class="b-cases-block">
+									<b>99%</b>
+									<p>
+									среднечастотников топ 5 в выдаче </p>
+								</div>
+								<div class="b-cases-block">
+									<b>100%</b>
+									<p>
+									низкочастотников топ 10 в выдаче</p>
+								</div>																
+							</div>
+							<img src="images/img3.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="b-team">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl">
+					<div class="b-title">
+						<h2>Команда</h2>
+					</div>
+					<div class="b-team-content">
+						<div class="b-team-left">
+							<div class="b-team-left__top">
+								<img src="images/b-team-left__img.png" alt="">
+							</div>
+							<div class="b-team-left__wrap">
+								<div class="b-team-left__col">
+									<img src="images/b-team-left__img2.png" alt="">
+									<img src="images/b-team-left__img3.png" alt="">
+								</div>
+								<img src="images/b-team-left__img4.png" alt="">
+								<div class="b-team-left__col">
+									<img src="images/b-team-left__img5.png" alt="">
+									<img src="images/b-team-left__img6.png" alt="">
+								</div>								
+							</div>
+						</div>
+						<div class="b-team-right">
+							<img src="images/b-team-right__img.png" alt="">
+							<b>Икар</b>
+							<a href="">#Программист</a>
+							<p>могёт, умеет практикует жется, в исходной таблице в «Зарплате» забыли написать, что отправка и подготовка тоже в ФНС?</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="b-reviews">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl">
+					<div class="b-title">
+						<h2>Отзывы</h2>
+					</div>
+					<div class="b-reviews-content">
+						<div class="b-reviews-item">
+							<div class="b-reviews-item__top">
+								<b>Виктор Павлович Смутяев</b>
+								<a href="">balalayka.com</a>
+							</div>
+							<p>Спасибо огромное.
+							Очень доволен. Очень рад. Безмерно счастлив. Всё сделано быстро и качественно. Будем сотрудничать и дальше. Советую всем.
+							Обращайтесь, не пожалеете!</p>
+						</div>
+						<div class="b-reviews-item">
+							<div class="b-reviews-item__top">
+								<b>Виктор Павлович Смутяев</b>
+								<a href="">balalayka.com</a>
+							</div>
+							<p>Спасибо огромное.
+							Очень доволен. Очень рад. Безмерно счастлив. Всё сделано быстро и качественно. Будем сотрудничать и дальше. Советую всем.
+							Обращайтесь, не пожалеете!</p>
+						</div>						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="b-consultation">
+		<div class="b-consultation-img">
+			<img src="images/girl.png" alt="">
+			<div class="b-consultation-img__text">
+				<div class="b-consultation-img__text__wrap">
+					<b>Пэйдж </b>
+					<span>ваш менеджер</span>					
+				</div>				
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xl">
+					<div class="b-consultation-content">
+						<div class="b-consultation-wrap">
+							<div class="b-modal-top">
+								<b>Заказать консультацию</b>
+							</div>
+							<div class="b-modal-form">
+								<form action="">
+									<div class="b-modal-form__top">
+										<input class="b-modal-form__input" type="text" placeholder="Имя *">
+										<input class="b-modal-form__input" type="text" placeholder="Телефон *">
+									</div>
+									<span class="b-modal-form__title">Чем вам помочь?</span>
+									<div class="b-modal-form__content">
+										<div class="b-modal-form__col">
+											<div class="b-checkbox">
+												<input type="radio" checked id="c1" name="b4" />
+												<label for="c1"><span></span><i>Сайт</i></label>  
+											</div>
+											<div class="b-checkbox">
+												<input type="radio"  id="n12" name="b4" />
+												<label for="n12"><span></span><i>Аудит</i></label>  
+											</div>							
+										</div>
+										<div class="b-modal-form__col">
+											<div class="b-checkbox">
+												<input type="radio"  id="n13" name="b4" />
+												<label for="n13"><span></span><i>Поддержка</i></label>  
+											</div>
+											<div class="b-checkbox">
+												<input type="radio"  id="n14" name="b4" />
+												<label for="n14"><span></span><i>Наполнение</i></label>  
+											</div>							
+										</div>
+										<div class="b-modal-form__col">
+											<div class="b-checkbox">
+												<input type="radio"  id="n15" name="b4" />
+												<label for="n15"><span></span><i>Доработка</i></label>  
+											</div>
+											<div class="b-checkbox">
+												<input type="radio"  id="n16" name="b4" />
+												<label for="n16"><span></span><i>Другое</i></label>  
+											</div>							
+										</div>												
+									</div>
+									<input class="b-modal-form__btn blue-btn" type="submit" value="Отправить">
+								</form>
+								
+								<div class="b-consultation-list">
+									<span class="b-modal-form__title">Может быть полезно</span>
+									<ul>
+										<li><a href="">SEO-продвижение</a></li>
+										<li><a href="">Техническая поддержка сайта</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>	
+</div>
+
+
+
+
+	<!-- begin b-footer -->
+	<footer class="b-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl">
+					<div class="b-footer-top">
+						<a href="" class="b-footer-logo"></a>
+						<div class="b-footer-contacts">
+							<div class="b-footer-item">
+								<span>ООО «Вебернетик»<br/>
+								г. Минск, ул.Кульман 9, 5<br/> этаж, офис 518</span>
+							</div>
+							<div class="b-footer-item">
+								<span>+375 17 380 2600</span>
+								<span>+375 29 673 0717</span>
+								<a href="mailto:office@webernetic.by">office@webernetic.by</a>
+							</div>							
+						</div>
+					</div>
+					<div class="b-footer-content">
+						<div class="b-footer-col">
+							<b>Меню </b>
+							<ul>
+								<li><a href="">О копании</a></li>
+								<li><a href="">Наши работы</a></li>
+								<li><a href="">Отзывы</a></li>
+								<li><a href="">Соискателю</a></li>
+							</ul>
+						</div>
+						<div class="b-footer-col">
+							<b>Разработка сайтов</b>
+							<ul>
+								<li><a href="">Интернет-магазины</a></li>
+								<li><a href="">Корпоративные сайты</a></li>
+								<li><a href="">Доработка сайтов</a></li>
+								<li><a href="">Поддержка сайтов</a></li>
+							</ul>
+						</div>
+						<div class="b-footer-col">
+							<b>SEO — продвижение</b>
+							<ul>
+								<li><a href="">Продвижение по трафику</a></li>
+								<li><a href="">Продижение по запросам</a></li>
+							</ul>
+						</div>
+						<div class="b-footer-col">
+							<b>Другие услуги</b>
+							<ul>
+								<li><a href="">SMM</a></li>
+								<li><a href="">PPC</a></li>
+							</ul>
+						</div>																		
+					</div>
+					<div class="b-footer-bottom">
+						<span class="b-copyright">Лидеры рынка с 1234г.</span>
+						<div class="b-footer-social">
+							<ul>
+								<li><a href=""><img src="images/vk.svg" alt=""></a></li>
+								<li><a href=""><img src="images/telegram.svg" alt=""></a></li>
+								<li><a href=""><img src="images/twitter.svg" alt=""></a></li>
+								<li><a href=""><img src="images/viber.svg" alt=""></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- end b-footer -->
+</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
