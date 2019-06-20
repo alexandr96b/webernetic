@@ -11,111 +11,58 @@ $('.b-menu-xs strong').click(function(){
   $(this).toggleClass('active');
 });
 
+// google maps
 
+// When the window has finished loading create our google map below
+google.maps.event.addDomListener(window, 'load', init);
 
+function init() {
+    // Basic options for a simple Google Map
+    // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+    var mapOptions = {
+        // How zoomed in you want the map to start at (always required)
+        zoom: 15,
+        disableDefaultUI: true,
 
+        // The latitude and longitude to center the map (always required)
 
+        center: new google.maps.LatLng(53.921740, 27.579010), // New York
 
+        // How you would like to style the map. 
+        // This is where you would paste any style found on Snazzy Maps.
+        
+    };
 
-$('.b-slider-wrap').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  fade: true,
-  arrows: false,
-  appendDots:  '.b-slider-dots',
-  dots: true
-});
+    // Get the HTML DOM element that will contain your map 
+    // We are using a div with id="map" seen below in the <body>
+    var mapElement = document.getElementById('map');
 
-$('.b-video-slider').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  fade: true,
-  arrows: true,
-  variableWidth: false,
-  dots: false
-});
+    // Create the Google Map using our element and options defined above
+    var map = new google.maps.Map(mapElement, mapOptions);
 
-$('.b-reviews-slider').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  fade: true,
-  arrows: true,
-  variableWidth: false,
-  dots: false
-});
+    // Let's also add a marker while we're at it
+    var marker = new google.maps.Marker({ 
+        position: new google.maps.LatLng(53.921740, 27.579010),
+        map: map,
+        title: 'Snazzy!',
+/*                icon: {
+                    url: "images/marker.svg",
+                    scaledSize: new google.maps.Size(42, 60),
+                    labelOrigin: new google.maps.Point(145, 25, 5),
+                    origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(36, 49)           
+                } */     
 
- 
+    });
 
-$(".btn-scroll").click(function(){
-  $('html, body').animate({scrollTop:0}, 'slow');
-});
+}
 
-var scrolledpx = parseInt($(window).scrollTop());
-$(window).scroll( function (){
-
-    scrolledpx = parseInt($(window).scrollTop()); 
-
-    if(scrolledpx > 1530){
-        $('.btn-scroll').addClass('active');
-     } else if(scrolledpx < 1531){
-      $('.btn-scroll').removeClass('active');
-     }
-
-    if(scrolledpx > 230){
-        $('.b-header-top').addClass('active');
-     } else if(scrolledpx < 231){
-      $('.b-header-top').removeClass('active');
-     }
-
-  });
-
-
-
-
-
-$('.menu-icon').click(function(){
-  $('.b-nav').toggleClass('active');
-  $('.menu-icon').toggleClass('active');
+$('.b-store-item__left').click(function(){
+  $(this).next().slideToggle('active');
+  $(this).toggleClass('active');
 });
 
 
-$(document).on('click', function(e) {
-  if (!$(e.target).closest(".menu-icon , .b-nav > div").length) {
-    $('.b-nav').removeClass('active');
-    $('.menu-icon').removeClass('active');
-  }
-  e.stopPropagation();
-});
-
- 
- 
-
-
-$(".b-main-left__bottom a").click(function (event) {
-    event.preventDefault();
-    var id  = $(this).attr('href'),
-        top = $(id).offset().top;
-        header = $('.b-header').outerHeight();
-    $('body,html').animate({scrollTop: top - header}, 700);
-});
-
-$(".b-menu-left a").click(function (event) {
-    event.preventDefault();
-    var id  = $(this).attr('href'),
-        top = $(id).offset().top;
-        header = $('.b-header').outerHeight();
-    $('body,html').animate({scrollTop: top - header}, 700);
-});
-/*var $page = $('html, body');
-$('.btn-more[href*="#"]').click(function() {
-    $page.animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 400);
-    return false;
-});
-
-
-*/
 
 
  

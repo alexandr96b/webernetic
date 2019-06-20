@@ -65,3 +65,24 @@
 	font-weight: 800;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: 'CenturySchoolbook-Bold';
+	src: url('CenturySchoolbook-Bold.eot');
+	src: local('CenturySchoolbook-Bold'), local('CenturySchoolbook-Bold'),
+		url('CenturySchoolbook-Bold.eot?#iefix') format('embedded-opentype'),
+		url('CenturySchoolbook-Bold.woff') format('woff'),
+		url('CenturySchoolbook-Bold.ttf') format('truetype');
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Constantia-Bold';
+	src: url('Constantia-Bold.eot');
+	src: local('Constantia-Bold'), local('Constantia-Bold'),
+		url('Constantia-Bold.eot?#iefix') format('embedded-opentype'),
+		url('Constantia-Bold.woff') format('woff'),
+		url('Constantia-Bold.ttf') format('truetype');
+	font-weight: 800;
+	font-style: normal;
+}
