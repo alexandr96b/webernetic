@@ -300,6 +300,11 @@
 							</div>
 							<div class="b-usability-item__right">
 								<div class="b-usability-item__right__wrap">
+									<div class="div-wrap__wrap">
+										<div class="div-wrap">
+											<div id="div"></div>
+										</div>
+									</div>
 									<img src="images/phone2.png" alt="">
 								</div>
 							</div>
@@ -331,6 +336,7 @@
 							</div>
 							<div class="b-usability-item__right">
 								<div class="b-usability-item__right__wrap">
+									<div class="div-wrap__wrap"></div>									
 									<img src="images/phone2.png" alt="">
 								</div>
 							</div>
@@ -646,5 +652,26 @@
 	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<script src="js/script.js"></script>
+	<script>
+
+$(window).scroll(function() {
+        // проверка на докрутку до определенного элемента
+        var scroll_picca =$('.b-usability-item__two').offset().top;
+        console.log(scroll_picca) ;// выводим в консоль смещение  элемента пицца
+        //если мы докрутили до нужного элемента 
+        if ($(this).scrollTop() > scroll_picca) {
+            // создаем эффекты и анимацию
+            $(".b-usability-item__two .b-usability-item__right").addClass('active');
+            
+        }else{
+            $(".b-usability-item__two .b-usability-item__right").removeClass('active');
+            
+        }   
+        // если докрутил до низа страницы
+        if($(window).scrollTop()+$(window).height()>=$(document).height()){
+            $(".b-usability-item__two .b-usability-item__right").removeClass('active');
+        }       
+}); 		
+	</script>
 </body>
 </html>
