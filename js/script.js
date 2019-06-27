@@ -37,7 +37,7 @@ $('.b-block-left__wrap input[type=checkbox]').click(function() {
 });
 */
 
-$(document).ready(function() {
+/*$(document).ready(function() {
         $(".b-block-left__wrap input[type=checkbox]").click(function() {
             var checked = $(this).is(':checked');
             if (checked) {
@@ -47,7 +47,7 @@ $(document).ready(function() {
             }
         });
     });
-
+*/
 // google maps
 
 // When the window has finished loading create our google map below
@@ -112,18 +112,37 @@ $(".b-aside-bottom").on("click","button", function (event) {
  
  
 
+
+
+
+
+var mywindow = $(window);
+var mypos = mywindow.scrollTop();
+mywindow.scroll(function() {
+    if(mywindow.scrollTop() > mypos)
+    {
+        $('.b-header').removeClass('active');  
+    }
+    else
+    {
+        $('.b-header').addClass('active');
+    }
+    mypos = mywindow.scrollTop();
+ });
+
+
 var scrolledpx = parseInt($(window).scrollTop());
 $(window).scroll( function (){
 
     scrolledpx = parseInt($(window).scrollTop()); 
 
-    if(scrolledpx > 100){
-        $('.b-header').addClass('active');
-     } else if(scrolledpx < 101){
-      $('.b-header').removeClass('active');
-     }
+    if(scrolledpx < 30){
+        $('.b-header').removeClass('active');
+     } else {
 
+     }
   });
+
 
 
 
