@@ -3276,7 +3276,9 @@ justify-content: space-between; */
 }
 
 .b-promotion{
-	margin: 0 0 220px 0;
+	margin: 0 0 220px 0 !important;
+	padding: 0 !important;
+
 }
 .b-promotion-top{
 
@@ -3475,7 +3477,7 @@ justify-content: space-between; */
 }
 
 section{
-	padding: 100px 0 !important;
+	padding: 60px 0 !important;
 	margin: 0 !important;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
